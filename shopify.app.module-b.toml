@@ -1,15 +1,13 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "d4e0ed19913b985122f9f86816862255"
+application_url = "https://cowboy-programmers-relating-passage.trycloudflare.com"
+embedded = true
 name = "module-b"
 handle = "module-b"
-application_url = "https://blond-tom-smart-limited.trycloudflare.com"
-embedded = true
 
-[build]
-automatically_update_urls_on_dev = true
-dev_store_url = "quickstart-1add1160.myshopify.com"
-include_config_on_deploy = true
+[webhooks]
+api_version = "2025-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
@@ -17,13 +15,14 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://blond-tom-smart-limited.trycloudflare.com/auth/callback",
-  "https://blond-tom-smart-limited.trycloudflare.com/auth/shopify/callback",
-  "https://blond-tom-smart-limited.trycloudflare.com/api/auth/callback"
+  "https://cowboy-programmers-relating-passage.trycloudflare.com/auth/callback",
+  "https://cowboy-programmers-relating-passage.trycloudflare.com/auth/shopify/callback",
+  "https://cowboy-programmers-relating-passage.trycloudflare.com/api/auth/callback"
 ]
-
-[webhooks]
-api_version = "2025-01"
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "quickstart-1add1160.myshopify.com"
+automatically_update_urls_on_dev = true

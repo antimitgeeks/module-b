@@ -13,7 +13,7 @@ const router = express.Router();
  */
 router.get("/products/count", (req, res) => {
     console.log('--------------------------------server response1');
-    res.status(200).send({ count: 43 });
+    res.status(200).send({ count: 2 });
 });
 // Export the Router
 module.exports = router;
