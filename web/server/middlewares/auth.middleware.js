@@ -1,4 +1,4 @@
-const { shopify } = require("../../shopify.js");
+const { shopify } = require("../../../../module-a/web/shopify.js");
 const Partners = require("../models/partners.model.js");
 const partnerService = require("../routes/index.js");
 

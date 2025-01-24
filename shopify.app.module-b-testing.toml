@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1d5bba018e4c77ecc8de9bdea26a87b4"
+application_url = "https://dining-verification-cost-preparing.trycloudflare.com"
+embedded = true
+name = "module-b-testing"
+handle = "module-b-testing"
+
+[build]
+include_config_on_deploy = true
+dev_store_url = "checkout-thank-you.myshopify.com"
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-01"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://dining-verification-cost-preparing.trycloudflare.com/auth/callback",
+  "https://dining-verification-cost-preparing.trycloudflare.com/auth/shopify/callback",
+  "https://dining-verification-cost-preparing.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false

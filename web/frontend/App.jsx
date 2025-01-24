@@ -10,7 +10,8 @@ export default function App() {
   // See documentation for <Routes /> for more info
   const pages = import.meta.glob("./pages/**/!(*.test.[jt]sx)*.([jt]sx)", {
     eager: true,
-  });
+  }); 
+
   const { t } = useTranslation();
 
   return (
@@ -19,7 +20,7 @@ export default function App() {
         <QueryProvider>
           <NavMenu>
             <a href="/" rel="home" />
-            <a href="/pagename">{t("NavigationMenu.pageName")}</a>
+            <a href="/pricing">Pricing</a>
           </NavMenu>
           <Routes pages={pages} />
         </QueryProvider>
