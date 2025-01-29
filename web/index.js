@@ -11,6 +11,9 @@ const routes = require(`./server/routes/index.js`);
 const { authenticateUser } = require(`./server/middlewares/auth.middleware.js`);
 const http = require("http");
 const cors = require("cors");
+require('../web/server/utils/crons.js');
+
+
 
 const PORT = parseInt(process.env.BACKEND_PORT || process.env.PORT || "3000", 10);
 const STATIC_PATH = process.env.NODE_ENV === "production"
@@ -22,6 +25,9 @@ const app = express();
 
 // Connect to Database
 dbConnection();
+
+//cron
+// cron.checkPartnerValidity();
 
 // Health Check Route
 app.get("/health", (req, res) => {

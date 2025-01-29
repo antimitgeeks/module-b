@@ -4,8 +4,6 @@ exports.languageList = async (req, res) => {
     const params=req.body
 
     const details = await Languages.find().sort({ createdAt: -1 }).limit(params.limit).skip(params.offset);
-    
-
     // Return the response structure with success message and fetched data
     const data = {
         status: true,

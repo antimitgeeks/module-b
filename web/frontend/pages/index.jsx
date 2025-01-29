@@ -20,7 +20,6 @@ import { useEffect, useState } from "react";
 import { trusted } from "mongoose";
 const APIServ = new APIServicess();
 
-console.log("trying")
 export default function HomePage() {
   const [languageList, setLanguageList] = useState([]);
   const location = useLocation();

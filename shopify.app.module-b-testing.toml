@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "1d5bba018e4c77ecc8de9bdea26a87b4"
-application_url = "https://dining-verification-cost-preparing.trycloudflare.com"
+client_id = "60a15fa5844cdec72fc7b5842275c3b1"
+application_url = "https://teen-atm-thee-sql.trycloudflare.com"
 embedded = true
 name = "module-b-testing"
 handle = "module-b-testing"
@@ -16,14 +16,18 @@ api_version = "2025-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "read_customers,read_product_listings,read_products,write_customers,write_order_edits,write_orders,write_products"
 
 [auth]
 redirect_urls = [
-  "https://dining-verification-cost-preparing.trycloudflare.com/auth/callback",
-  "https://dining-verification-cost-preparing.trycloudflare.com/auth/shopify/callback",
-  "https://dining-verification-cost-preparing.trycloudflare.com/api/auth/callback"
+  "https://teen-atm-thee-sql.trycloudflare.com/auth/callback",
+  "https://teen-atm-thee-sql.trycloudflare.com/auth/shopify/callback",
+  "https://teen-atm-thee-sql.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
 embedded = false
+
+[access.admin]
+direct_api_mode = "offline"
+embedded_app_direct_api_access = true

@@ -1,5 +1,5 @@
 import { Card, Page, Layout, TextContainer, Text, InlineGrid, Box, Thumbnail, InlineStack, BlockStack, Icon, Button } from "@shopify/polaris";
-import { TitleBar } from "@shopify/app-bridge-react";
+import { TitleBar,useAppBridge } from "@shopify/app-bridge-react";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 
@@ -8,10 +8,45 @@ import { useEffect, useState } from "react";
 import APIServices from "../services/APIServices";
 const APIServ = new APIServices();
 
-export default function PageName() {
+export default  function PageName() {
   const { t } = useTranslation();
+ const appBridge=useAppBridge();
+
+  // const getProductData=async()=>{
+  //   const res = await fetch('shopify:admin/api/graphql.json', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       query: `
+  //        mutation addTags($id: ID!, $tags: [String!]!) {
+  //         tagsAdd(id: $id, tags: $tags) {
+  //           node {    
+  //             id
+  //           }
+  //           userErrors {
+  //             message
+  //           }
+  //         }
+  //       }
+  //       `,
+  //       variables: {
+  //          "id": "gid://shopify/Customer/7604450787549",
+  // "tags": "one, two, three"
+  //       },
+  //     }),
+  //   });
+    
+  //   const result = await res.json();
+  //   console.log(result);
+  // }
+  useEffect(() => {
+    // handlePricingBannerAction();
+    // getProductData()
+    APIServ.languageList();
+  },[])
   const [isFetched,setFetched]=useState(false);
   const handlePricingBannerAction = async () => {
+    console.log("trying--------------------",await useAppBridge())
+
     try {
       let resp = await APIServ.setupGuide();
       if (resp.status === true) {
